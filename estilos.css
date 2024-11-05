@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+select,
+input,
+form,
+table {
+    width: 40%;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form,
+#modificar,
+#borrar {
+    display: none;
+}
+
+form,
+table {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form input[type="text"],
+form input[type="submit"],
+button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"],
+button {
+    background-color: #d4af37;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+form input[type="submit"]:hover,
+button:hover {
+    background-color: #b8860b;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+.error {
+    color: #ff4d4d;
+    display: none;
+}
+
+th button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    form,
+    table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    form,
+    table {
+        padding: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="submit"],
+    button {
+        padding: 8px;
+    }
+}
+
+#lblDinamico2,
+#txtDinamico2,
+#txtDinamico1,
+#lblDinamico2,
+#tabla {
+    display: none;
+}
+
+#tipo {
+    display: block;
+}
+
+#spinner {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 8px solid #000000;
+    border-top: 8px solid #d4af37;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px; 
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 1er parcial</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <h1>practica segundo parcial</h1>
+    <div id="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Modelo</th>
+                    <th>año de fabricacion</th>
+                    <th>velocidad</th>
+                    <th>asientos</th>
+                    <th>cantidad puertas</th>
+                    <th>carga</th>
+                    <th>autonomia</th>
+                    <th>modificar</th>
+                    <th>eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="datos"></tbody>
+        </table>
+        <button id="agregar">agregar</button>
+    </div>
+    
+    <div id="spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <form method="post" action="" id="form">
+        <h2 id="actividad"></h2>
+
+        <label for="txtId">ID:</label>
+        <input type="text" name="txtId" id="txtId" readonly>
+
+        <label for="txtModelo">Modelo:</label>
+        <label class="error" id="errorModelo">Este campo no puede estar vacío</label>
+        <input type="text" name="Modelo" id="txtModelo">
+
+        <label for="txtAnoFabricacion">año Fabricacion:</label>
+        <label class="error" id="errorAnoFabricacion">Este campo no puede estar vacío</label>
+        <input type="text" name="anoFabricacion" id="txtAnoFabricacion">
+
+        <label for="txtVelMax">velocidad:</label>
+        <label class="error" id="errorVelMax">la velocidad debe ser mayor a cero</label>
+        <input type="text" name="Modelo" id="txtVelMax">
+
+        <label class="error" id="errorTipo">ternes que elegir el tipo</label>
+        <select id="tipo" onchange="mostrarCampos()">
+            <option value="">selecionar</option>
+            <option value="camion">camion</option>
+            <option value="auto">auto</option>
+        </select>
+
+        <label for="txtDinamico1" id="lblDinamico1"></label>
+        <label class="error" id="errorDinamico1"></label>
+        <input type="text" id="txtDinamico1">
+
+        <label for="txtDinamico2" id="lblDinamico2"></label>
+        <label class="error" id="errorDinamico2"></label>
+        <input type="text" id="txtDinamico2">
+
+        <input type="submit" value="Enviar">
+        <button type="button" onclick="cancelar()">cancelar</button>
+    </form>
+
+    <div id="error" style="display: none;">
+        <img id="imagenError">
+        <h2 id="tituloError"></h2>
+        <button onclick="recargarPagina()">recargar</button>
+    </div>
+
+    <script src="funciones.js" defer></script>
+
+</body>
+
+</html>
